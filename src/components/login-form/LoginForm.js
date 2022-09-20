@@ -12,7 +12,12 @@ const LoginForm = () => {
 
 	const loginAction = () => {
 		const result = SignIn({ username, password });
-		result.then(() => {dispatch(login({ username, password }));setCredentialError('')}).catch(e => setCredentialError('Username o password errati'));
+		result
+			.then(() => {
+				dispatch(login({ username, password }));
+				setCredentialError('');
+			})
+			.catch(e => setCredentialError('Username o password errati'));
 	};
 
 	return (
@@ -21,7 +26,7 @@ const LoginForm = () => {
 				<span className="login-text">Login Form</span>
 				<input type="text" className="input" onChange={e => setUsername(e.target.value)} placeholder="Inserisci il tuo username"></input>
 				<input type="password" className="input" onChange={e => setPassword(e.target.value)} placeholder="Inserisci la tua password"></input>
-				<div className='danger'>{credentialError}</div>
+				<div className="danger">{credentialError}</div>
 				<button className="submit" onClick={loginAction}>
 					Login
 				</button>
