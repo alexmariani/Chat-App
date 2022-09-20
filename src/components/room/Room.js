@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Modal from '../modal/Modal'
 import './Room.css'
 
-const Room = ({ user, room }) => {
+const Room = ({ room }) => {
+	
 	const [isOpen, setIsOpen] = useState(false);
 	const { name, persons, owner, onlinePersons } = room;
 	
@@ -16,7 +17,7 @@ const Room = ({ user, room }) => {
 					<div className="room-creator">Owner:{owner}</div>
 				</div>
 			</div>
-			<Modal exitFunction={setIsOpen} displayOption={isOpen ? 'flex' : 'none'} user={user} room={room}></Modal>
+			<Modal exitFunction={setIsOpen} displayOption={isOpen ? 'flex' : 'none'} room={room}></Modal>
 		</>
 	);
 };
