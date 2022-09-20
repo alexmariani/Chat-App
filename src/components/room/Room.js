@@ -4,8 +4,8 @@ import './Room.css'
 
 const Room = ({ user, room }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { name, persons, owner } = room;
-	const onlinePersons=persons.filter(p => p.isOnline);
+	const { name, persons, owner, onlinePersons } = room;
+	
 	return (
 		<>
 			<div className="card" onClick={() => setIsOpen(true)}>
