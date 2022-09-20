@@ -1,0 +1,48 @@
+.navbar{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #592E83;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 25px;
+    color:#fff;
+    padding: 3rem;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.log{
+    padding: 3rem;
+}
+
+.btn{
+    width: 10rem;
+	height: 3rem;
+    transition: all .5s ;
+    border-radius: 40px;
+    color:#fff;
+}
+
+.btn:hover{
+    scale:1.1;
+    cursor: pointer;
+    color:#000;
+}
+
+.login{
+	background-color: green;
+    border: green;
+}
+
+.logout{
+    background-color: red;
+    border: red;
+}
