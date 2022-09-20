@@ -23,7 +23,7 @@ const socketConnect = () => {
 		console.log(`client id:${socket.id} connected`);
 
 		socket.on('send_msg', ({ user, newMessage, room }) => {
-			console.log(`User:${JSON.stringify(user)} nuovo messaggio:${newMessage} registrato dalla room :${JSON.stringify(room)}`);
+			console.log(`User:${JSON.stringify(user)} new message :${newMessage} from  room :${JSON.stringify(room)}`);
 		});
 
 		socket.on('disconnect', reason => {
